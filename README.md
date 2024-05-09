@@ -1,22 +1,27 @@
-The project involes 2 parts:
+# Spectral Unmixing and Classification Project
 
-- First Part:
+## Overview:
+This project consists of two main parts aimed at analyzing hyperspectral image data: Spectral Unmixing and Classification.
 
-The aim here is to perform unmixing on each one of the pixels in the image with
-nonzero label, with respect to the 9 endmembers (obtained after the execution of the
-attached python code) using the following five different spectral unmixing methods:
-(a) Least squares (as it was presented in the class),
-(b) Least squares imposing the sum-to-one constraint
-(c) Least squares imposing the non-negativity constraint on the entries of θ
-(d) Least squares imposing both the non-negativity and the sum-to-one constraint on
-the entries of θ.
-(e) LASSO, i.e., impose sparsity on θ via 𝑙1 norm minimization.
+### First Part: Spectral Unmixing
+The objective of this part is to perform unmixing on each pixel in the image with a nonzero label, with respect to 9 endmembers obtained after executing the attached Python code. Five different spectral unmixing methods are employed:
+1. Least squares (as presented in class).
+2. Least squares imposing the sum-to-one constraint.
+3. Least squares imposing the non-negativity constraint on the entries of θ.
+4. Least squares imposing both the non-negativity and the sum-to-one constraint on the entries of θ.
+5. LASSO, which imposes sparsity on θ via 𝑙1 norm minimization.
 
+### Second Part: Classification
+In this part, image pixels with non-zero class labels are considered. The task is to assign each of them to the most appropriate class among the 9 known classes. Four classifiers are utilized for this purpose:
+1. Naïve Bayes classifier.
+2. Minimum Euclidean distance classifier.
+3. k-nearest neighbor classifier.
+4. Bayesian classifier.
 
-- Second Part:
+## Spectral_Unmixing_Classification Repository Structure:
+The repository contains the following files and directories:
 
-In this case, we consider also the image pixels with non-zero class label. The task is to
-assign each one of them to the most appropriate class, among the 9 known classes. To
-this end four classifiers will be used: (i) the naïve Bayes classifier, (ii) the minimum
-Euclidean distance classifier, (iii) the k-nearest neighbor classifier and (iv) the Bayesian
-classifier. # Spectral_Unmixing_Classification
+- **Python Code:** Contains the Python script used to obtain the 9 endmembers required for spectral unmixing.
+- **Notebooks:** Includes Jupyter notebooks for each part of the project, detailing the implementation and analysis of spectral unmixing and classification methods.
+- **Data:** Contains hyperspectral image data used for experimentation and analysis.
+- **Results:** Contains output files and visualizations generated during the spectral unmixing and classification processes.
